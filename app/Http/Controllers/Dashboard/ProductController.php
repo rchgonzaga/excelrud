@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Http\Requests\ProductUpdateRequest;
 use App\Product;
+use App\Repository\ProductRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
@@ -30,10 +31,14 @@ class ProductController extends Controller
         return view('dashboard.product.edit', ['product' => $product]);
     }
 
-    public function update($productId, ProductUpdateRequest $request)
+    public function update($productId, ProductUpdateRequest $request, ProductRepository $productRepository)
     {
         $product = Product::find($productId);
         if (Gate::denies('product', $product)) abort(403);
+
+        $existingProduct = $productRepository->findByUserLm($request->user()->id, $request->input('lm'));
+        if($existingProduct && $product->id != $existingProduct->id)
+            return redirect()->back()->withErrors(['LM already in use']);
 
         $fields = ['lm', 'name', 'category', 'free_shipping', 'description', 'price'];
         foreach ($fields as $field) {
