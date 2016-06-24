@@ -65,7 +65,7 @@
 
         <form action="{{ route('product.destroy', ['id' => $product->id]) }}" method="POST"
               onsubmit="return confirm('Are you sure you want to delete {{$product->id}}?}')"
-              class="text-right">
+              class="form-group text-right">
             <input type="hidden" name="_method" value="DELETE">
             {{ csrf_field() }}
 
