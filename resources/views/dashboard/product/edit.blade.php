@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label for="lm" class="control-label">LM</label>
                 <input id="lm" type="text" name="lm" value="{{ $product->lm }}" class="form-control" placeholder="LM"
-                       autofocus>
+                       autofocus required>
             </div>
 
             <div class="form-group">

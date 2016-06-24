@@ -23,7 +23,8 @@ class ProductUpdateRequest extends Request
     {
         return [
             'name' => 'required',
-            'price' => 'numeric|required'
+            'price' => 'numeric|required',
+            'lm' => 'required'
         ];
     }
 }
