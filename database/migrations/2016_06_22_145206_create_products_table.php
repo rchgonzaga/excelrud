@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->string('lm')->nullable();
+            $table->string('lm')->unique();
             $table->string('name');
             $table->string('category');
             $table->boolean('free_shipping')->default(false);
