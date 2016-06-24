@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('lm')->unique();
             $table->string('name');
             $table->string('category');
-            $table->boolean('free_shipping')->default(false);
+            $table->boolean('free_shipping')->default(0)->nullable();
             $table->string('description')->nullable();
             $table->float('price');
 
