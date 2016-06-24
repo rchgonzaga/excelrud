@@ -1,0 +1,55 @@
+body {
+    padding-top: 70px;
+}
+
+.alert {
+    position: fixed;
+    top: 70px;
+    right: 8px;
+    width: 30em;
+    max-width: 90%;
+}
+
+.page-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, .1);
+}
+
+.page-header > * {
+    margin-top: 0;
+    font-weight: 300;
+}
+
+tr[data-href] {
+    cursor: pointer;
+}
+
+.import__status {
+    text-transform: capitalize;
+}
+
+.import__status--waiting {
+    color: gray !important;
+}
+
+.import__status--queued {
+    color: red !important;
+}
+
+.import__status--processing {
+    color: blue !important;
+}
+
+.import__status--done {
+    color: green !important;
+}
+
+.product__free_shipping .fa-check {
+    color: green;
+}
+
+.product__free_shipping .fa-remove {
+    color: red;
+}
