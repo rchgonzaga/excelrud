@@ -11,6 +11,10 @@ https://getcomposer.org/
 
     `composer install`
 
+- Create app key
+
+    `php artisan key:generate`
+
 - Configure database
     - Copy the .env.example file to .env and configure your environment variables
         - APP_URL
@@ -22,6 +26,11 @@ https://getcomposer.org/
      
 ## Architecture
 This project uses the default Laravel architecture. For more information, please check the [laravel website](https://laravel.com).
+
+## Running Application
+- Serve
+
+    `php artisan serve`
 
 ## Running Tests
 - Refresh database (recommended)
