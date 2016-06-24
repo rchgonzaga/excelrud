@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
 {
@@ -20,6 +21,7 @@ class UserController extends Controller
     public function update($userId, UserUpdateRequest $request)
     {
         $user = User::find($userId);
+        if (Gate::denies('user', $user)) abort(403);
 
         $fields = ['name'];
         foreach ($fields as $field) {

@@ -10,6 +10,7 @@ use File;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Gate;
 
 class ImportController extends Controller
 {
@@ -27,6 +28,8 @@ class ImportController extends Controller
     public function show($importId)
     {
         $import = Import::find($importId);
+        if (Gate::denies('import', $import)) abort(403);
+
         $products = $import->products()->get();
         return view('dashboard.import.show', ['import' => $import, 'products' => $products]);
     }
