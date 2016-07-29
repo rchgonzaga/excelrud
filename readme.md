@@ -1,5 +1,8 @@
 # Laravel ExcelRud
-[ ![Codeship Status for pedsmoreira/laravel-excel-rud](https://codeship.com/projects/b8d390a0-37dc-0134-9c79-460717981076/status?branch=master)](https://codeship.com/projects/165889)
+[![Codeship Status for pedsmoreira/laravel-excel-rud](https://codeship.com/projects/b8d390a0-37dc-0134-9c79-460717981076/status?branch=master)](https://codeship.com/projects/165889)
+[![Code Climate](https://codeclimate.com/github/pedsmoreira/laravel-excel-rud/badges/gpa.svg)](https://codeclimate.com/github/pedsmoreira/laravel-excel-rud)
+[![Test Coverage](https://codeclimate.com/github/pedsmoreira/laravel-excel-rud/badges/coverage.svg)](https://codeclimate.com/github/pedsmoreira/laravel-excel-rud/coverage)
+[![Issue Count](https://codeclimate.com/github/pedsmoreira/laravel-excel-rud/badges/issue_count.svg)](https://codeclimate.com/github/pedsmoreira/laravel-excel-rud)
 
 [Laravel-ExcelRud application](https://github.com/pedsmoreira/laravel-excel-rud)
 
